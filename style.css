@@ -1,0 +1,102 @@
+body {
+  width: 100%;
+  background: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  user-select: none;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c7feff;
+  background: linear-gradient(160deg, #ffd258 0%, #fe4956 100%);
+}
+
+.buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.buttons #toggleCard, .buttons #toggleSound {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  transition: all ease 0.15s;
+  width: 40px;
+  height: 40px;
+}
+.buttons #toggleSound {
+  width: 0px;
+  overflow: hidden;
+}
+.buttons #toggleSound:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.buttons #toggleSound:focus {
+  outline: none;
+  border: none;
+}
+.buttons #toggleCard:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.buttons #toggleCard:focus {
+  outline: none;
+  border: none;
+}
+
+#postcard {
+  position: fixed;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  bottom: -999px;
+  height: 80%;
+  width: 90%;
+  max-width: 600px;
+  background: #fefefe;
+  border-radius: 5px;
+  box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.25s;
+  padding: 5%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  #postcard {
+    padding: 8%;
+  }
+}
+#postcard #message {
+  user-select: none;
+  font-family: "Gochi Hand", cursive;
+}
+#postcard #doodle {
+  margin-left: calc(80% - 100px);
+  margin-top: -120px;
+  height: 200px;
+}
+#postcard #stamp {
+  width: 80px;
+  height: 80px;
+}
+
+form {
+  position: fixed;
+}
+
+/*# sourceMappingURL=style.css.map */
